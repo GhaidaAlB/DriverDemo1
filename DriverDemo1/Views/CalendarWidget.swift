@@ -12,7 +12,7 @@ import EventKitUI
 struct CalendarWidget: View {
     let today = Date()
     @State private var events: [EKEvent] = []
-    @State private var isPresentingCalendarChooser = false
+    //@State private var isPresentingCalendarChooser = false
     
     
     var body: some View {
@@ -21,9 +21,9 @@ struct CalendarWidget: View {
                .font(.title)
                .padding()
             
-            Button("Choose Calendar"){
+           /* Button("Choose Calendar"){
                 isPresentingCalendarChooser = true
-            }
+            }*/
             
             //Display today's events
             VStack(alignment: .leading, spacing: 8){
@@ -37,9 +37,9 @@ struct CalendarWidget: View {
         .onAppear {
             fetchEvents()
             
-        .sheet(isPresented: $isPresentingCalendarChooser){
+        /*.sheet(isPresented: $isPresentingCalendarChooser){
                     CalendarChooserView(isPresented: $isPresentingCalendarChooser)
-                }
+                }*/
         }
     }
     
@@ -65,7 +65,7 @@ struct CalendarWidget: View {
         
         
     //Calendar Chooser View
-    struct CalendarChooserView: UIViewControllerRepresentable {
+    /*struct CalendarChooserView: UIViewControllerRepresentable {
         
         @Binding var isPresented: Bool
         
@@ -99,14 +99,14 @@ struct CalendarWidget: View {
             
             func calendarChooserDidCancel(_ calendarChooser: EKCalendarChooser) {
                 parent.isPresented = false
-            }
+            }*/
         }
         
-    }
+    //}
     
     struct CalendarWidget_Previews: PreviewProvider {
         static var previews: some View {
             CalendarWidget()
         }
     }
-}
+//}
