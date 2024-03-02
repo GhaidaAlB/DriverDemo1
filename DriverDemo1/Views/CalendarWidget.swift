@@ -7,7 +7,7 @@
 
 import SwiftUI
 import EventKit
-import EventKitUI
+//import EventKitUI
 
 struct CalendarWidget: View {
     let today = Date()
@@ -16,7 +16,27 @@ struct CalendarWidget: View {
     
     
     var body: some View {
-        VStack{
+        List(events, id: \.eventIdentifier) {
+            event in
+            VStack(alignment: .leading) {
+                Text(event.title)
+                Text(event.startDate, style: .time)
+                    .foregroundColor(.secondary)
+            }
+        }
+        
+        .onAppear {
+            fetchEvents()
+        }
+        
+        private func fetchEvents() {
+            let eventStore = EKEventStore()
+            let startDate = Calendar.current.startOfDay(for: Date())
+            let endDate = Calendar.current.date(byAdding: .day, value: 1, to: startDate)!
+            let predicate = eventStore.predicateForEvents(withStart: startDate, end: endDate, calendars: nil)
+            events = eventStore.events(matching: predicate)
+        }
+        /*VStack{
             Text("Today's events:")
                .font(.title)
                .padding()
@@ -101,12 +121,12 @@ struct CalendarWidget: View {
                 parent.isPresented = false
             }*/
         }
+    */
+    }
         
-    //}
-    
     struct CalendarWidget_Previews: PreviewProvider {
         static var previews: some View {
             CalendarWidget()
         }
     }
-//}
+}
