@@ -11,9 +11,10 @@
 		F0840A6A2B92F587003C3495 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0840A692B92F587003C3495 /* ContentView.swift */; };
 		F0840A6C2B92F590003C3495 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0840A6B2B92F590003C3495 /* Assets.xcassets */; };
 		F0840A6F2B92F590003C3495 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0840A6E2B92F590003C3495 /* Preview Assets.xcassets */; };
-		F0840A792B92F590003C3495 /* DriverDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0840A782B92F590003C3495 /* DriverDemoTests.swift */; };
-		F0840A832B92F590003C3495 /* DriverDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0840A822B92F590003C3495 /* DriverDemoUITests.swift */; };
-		F0840A852B92F590003C3495 /* DriverDemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0840A842B92F590003C3495 /* DriverDemoUITestsLaunchTests.swift */; };
+		F0840A922B9302F4003C3495 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0840A912B9302F4003C3495 /* Coordinator.swift */; };
+		F0840A962B930AB7003C3495 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0840A952B930AB7003C3495 /* HomeView.swift */; };
+		F0840A982B930E21003C3495 /* UnAvailableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0840A972B930E21003C3495 /* UnAvailableView.swift */; };
+		F0840A9A2B9313E8003C3495 /* CoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0840A992B9313E8003C3495 /* CoordinatorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,10 +41,11 @@
 		F0840A6B2B92F590003C3495 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F0840A6E2B92F590003C3495 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F0840A742B92F590003C3495 /* DriverDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DriverDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F0840A782B92F590003C3495 /* DriverDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverDemoTests.swift; sourceTree = "<group>"; };
 		F0840A7E2B92F590003C3495 /* DriverDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DriverDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F0840A822B92F590003C3495 /* DriverDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverDemoUITests.swift; sourceTree = "<group>"; };
-		F0840A842B92F590003C3495 /* DriverDemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverDemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F0840A912B9302F4003C3495 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		F0840A952B930AB7003C3495 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		F0840A972B930E21003C3495 /* UnAvailableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnAvailableView.swift; sourceTree = "<group>"; };
+		F0840A992B9313E8003C3495 /* CoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,8 +77,6 @@
 			isa = PBXGroup;
 			children = (
 				F0840A662B92F587003C3495 /* DriverDemo */,
-				F0840A772B92F590003C3495 /* DriverDemoTests */,
-				F0840A812B92F590003C3495 /* DriverDemoUITests */,
 				F0840A652B92F587003C3495 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -94,8 +94,10 @@
 		F0840A662B92F587003C3495 /* DriverDemo */ = {
 			isa = PBXGroup;
 			children = (
+				F0840A932B930A8A003C3495 /* Views */,
 				F0840A672B92F587003C3495 /* DriverDemoApp.swift */,
 				F0840A692B92F587003C3495 /* ContentView.swift */,
+				F0840A912B9302F4003C3495 /* Coordinator.swift */,
 				F0840A6B2B92F590003C3495 /* Assets.xcassets */,
 				F0840A6D2B92F590003C3495 /* Preview Content */,
 			);
@@ -110,21 +112,22 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		F0840A772B92F590003C3495 /* DriverDemoTests */ = {
+		F0840A932B930A8A003C3495 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				F0840A782B92F590003C3495 /* DriverDemoTests.swift */,
+				F0840A942B930A94003C3495 /* Home */,
+				F0840A972B930E21003C3495 /* UnAvailableView.swift */,
+				F0840A992B9313E8003C3495 /* CoordinatorView.swift */,
 			);
-			path = DriverDemoTests;
+			path = Views;
 			sourceTree = "<group>";
 		};
-		F0840A812B92F590003C3495 /* DriverDemoUITests */ = {
+		F0840A942B930A94003C3495 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				F0840A822B92F590003C3495 /* DriverDemoUITests.swift */,
-				F0840A842B92F590003C3495 /* DriverDemoUITestsLaunchTests.swift */,
+				F0840A952B930AB7003C3495 /* HomeView.swift */,
 			);
-			path = DriverDemoUITests;
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,7 +261,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0840A6A2B92F587003C3495 /* ContentView.swift in Sources */,
+				F0840A9A2B9313E8003C3495 /* CoordinatorView.swift in Sources */,
+				F0840A982B930E21003C3495 /* UnAvailableView.swift in Sources */,
+				F0840A962B930AB7003C3495 /* HomeView.swift in Sources */,
 				F0840A682B92F587003C3495 /* DriverDemoApp.swift in Sources */,
+				F0840A922B9302F4003C3495 /* Coordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,7 +273,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F0840A792B92F590003C3495 /* DriverDemoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,8 +280,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F0840A832B92F590003C3495 /* DriverDemoUITests.swift in Sources */,
-				F0840A852B92F590003C3495 /* DriverDemoUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

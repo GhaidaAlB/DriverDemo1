@@ -7,9 +7,7 @@
 
 import SwiftUI
 
-struct UnReadView: View {
-    
-    @StateObject private var coordinator = Coordinator()
+struct UnAvailableView: View {
     
     var body: some View {
         
@@ -19,12 +17,7 @@ struct UnReadView: View {
                                    ,description:
                                     Text("we currently working on this view")
             )
-            
-            Button("Back"){
-                coordinator.goToHome()
-            }
-            
-            
+
             Spacer()
         }
             
@@ -33,5 +26,5 @@ struct UnReadView: View {
 }
 
 #Preview {
-    UnReadView()
+    UnAvailableView()
 }
