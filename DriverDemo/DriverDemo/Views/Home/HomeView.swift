@@ -12,13 +12,21 @@ struct HomeView: View {
     private var user = UserProfileData.example
     
     var body: some View {
-        ScrollView{
-            VStack{
-                HomeHeaderView(fullName: user.image, firstName: user.firstName)
+       
+            NavigationStack{
+                ScrollView {
+                VStack(spacing: 20) {
+                    Spacer(minLength: 20)
+                    HomeHeaderView(fullName: user.image, firstName: user.firstName)
+                        .padding()
+                    
+                }
+                .background(Color.gray.opacity(0.1))
             }
-            .padding()
+            
+            .edgesIgnoringSafeArea(.top)
         }
-    }
+        }
 }
 
 #Preview {

@@ -7,38 +7,12 @@
 
 import SwiftUI
 
-final class Coordinator: ObservableObject {
-    @Published var selectedTab: Tab = .home
-    
-    init() {
-        // Initial setup if needed
-    }
-    
-    @ViewBuilder
-    func viewForTab(_ tab: Tab) -> some View {
-        switch tab {
-        case .home:
-            HomeView()
-        case .map, .services, .tasks:
-            UnAvailableView()
-        }
-    }
-    
-    func tabItem(for tab: Tab) -> some View {
-        Label(tab.title, systemImage: tab.systemImageName)
-    }
-}
-
-
 enum Tab:Hashable,CaseIterable {
     case map
     case home
     case tasks
     case services
     
-}
-
-extension Tab {
     var title: String {
         switch self {
         case .home: return "Home"
@@ -46,8 +20,8 @@ extension Tab {
         case .tasks: return "Tasks"
         case .services: return "Services"
         }
+        
     }
-    
     var systemImageName: String {
         switch self {
         case .home: return "house.fill"
@@ -56,4 +30,7 @@ extension Tab {
         case .services: return "wrench.and.screwdriver.fill"
         }
     }
+    
 }
+
+
