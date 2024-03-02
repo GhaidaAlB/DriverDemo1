@@ -8,11 +8,21 @@
 import SwiftUI
 
 struct WelcomeUser: View {
+    var firstName:String
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(alignment:.leading){
+            Text("Welcome back ,")
+                .bold()
+                .font(.system(size: 15))
+                .fontDesign(.default)
+            
+            Text(firstName)
+                .foregroundStyle(.gray)
+                .font(.system(size: 14))
+        }
     }
 }
 
 #Preview {
-    WelcomeUser()
+    WelcomeUser(firstName: "Ava")
 }

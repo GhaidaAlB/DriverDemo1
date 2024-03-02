@@ -8,11 +8,35 @@
 import SwiftUI
 
 struct HomeHeaderView: View {
+    var fullName:String
+    var firstName:String
+    @State private var isBellActive:Bool = false
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack{
+            HStack(spacing:15){
+                Avatar(imageName:fullName,size:50)
+               
+                WelcomeUser(firstName: firstName)
+            }
+            Spacer()
+            Button{
+                isBellActive.toggle()
+            }label: {
+                Image(systemName: "bell.fill")
+                    .font(.system(size: 20))
+                    .foregroundStyle(.gray)
+                    
+            }
+            .buttonStyle(.plain)
+        }
+        .sheet(isPresented: $isBellActive){
+            UnAvailableView()
+        }
+        
     }
 }
 
 #Preview {
-    HomeHeaderView()
+    HomeHeaderView(fullName: "AvaThompsom", firstName: "Ava")
 }

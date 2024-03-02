@@ -6,15 +6,18 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct DriverDemoApp: App {
+
     @StateObject private var coordinator = Coordinator()
 
-    var body: some Scene {
-        WindowGroup {
-            CoordinatorView()
-                .environmentObject(coordinator)
-        }
+       var body: some Scene {
+           WindowGroup {
+               CoorinatorView()
+                   .environmentObject(coordinator)
+           }
+           .modelContainer(for: UserProfileData.self)
     }
 }

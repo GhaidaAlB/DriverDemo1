@@ -6,10 +6,18 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct HomeView: View {
+    private var user = UserProfileData.example
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ScrollView{
+            VStack{
+                HomeHeaderView(fullName: user.image, firstName: user.firstName)
+            }
+            .padding()
+        }
     }
 }
 

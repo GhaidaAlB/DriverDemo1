@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MainView: View {
+struct CoorinatorView: View {
     @EnvironmentObject var coordinator: Coordinator
 
     var body: some View {
@@ -20,9 +20,10 @@ struct MainView: View {
                     .tag(tab)
             }
         }
+        .environmentObject(coordinator)
     }
 }
 
 #Preview {
-    MainView()
+    CoorinatorView()
 }
