@@ -8,14 +8,21 @@
 import SwiftUI
 
 struct HomeHeaderView: View {
+    let user = UserProfileData.example
     var fullName:String
     var firstName:String
     @State private var isBellActive:Bool = false
+    @State private var isBusniessCard:Bool = false
     
     var body: some View {
         HStack{
             HStack(spacing:15){
-                Avatar(imageName:fullName,size:50)
+                Button{
+                    isBusniessCard.toggle()
+                }label: {
+                    Avatar(imageName:fullName,size:50)
+                }
+               
                
                 WelcomeUser(firstName: firstName)
             }
@@ -33,6 +40,12 @@ struct HomeHeaderView: View {
         .sheet(isPresented: $isBellActive){
             UnAvailableView()
         }
+        .popover(isPresented: $isBusniessCard){
+            BusinessCard(model: user)
+                .presentationDetents([.fraction(0.3)])
+                
+        }
+        
         
     }
 }
