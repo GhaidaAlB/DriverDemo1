@@ -28,8 +28,12 @@ struct TabsViews: View {
             switch tab {
             case .home:
                 HomeView()
-            case .map, .services, .tasks:
+            case .map:
+                MapView()
+            case .services, .tasks:
                 UnAvailableView()
+                    
+                   
             }
         }
 }
