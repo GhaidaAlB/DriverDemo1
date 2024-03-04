@@ -30,7 +30,9 @@ struct TabsViews: View {
                 HomeView()
             case .map:
                 MapView()
-            case .services, .tasks:
+            case .tasks:
+                TasksView()
+            case .services:
                 UnAvailableView()
                     
                    

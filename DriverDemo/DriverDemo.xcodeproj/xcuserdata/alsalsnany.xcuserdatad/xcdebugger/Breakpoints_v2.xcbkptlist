@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "4C58C5FF-728A-489B-BA84-7C59FCBA3B53"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "313AA0A5-A100-432F-BA18-1E9A03E44530"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../../../../../var/folders/bc/k62xg8cn44lb8y0_vl7q2dm00000gn/T/swift-generated-sources/@__swiftmacro_10DriverDemo9TasksViewV12taskCategory5QueryfMp_.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1"
+            endingLineNumber = "1">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4FCD53F1-118A-4F64-939D-854C8D4B3C7A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../../../../../var/folders/bc/k62xg8cn44lb8y0_vl7q2dm00000gn/T/swift-generated-sources/@__swiftmacro_10DriverDemo8Category5ModelfMm_.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1"
+            endingLineNumber = "1"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  uuid = "4FCD53F1-118A-4F64-939D-854C8D4B3C7A - e14bf1ee3d874d5e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DriverDemo.Category.init(title: Swift.String, tasks: Swift.Optional&lt;Swift.Array&lt;DriverDemo.Task&gt;&gt;) -&gt; DriverDemo.Category"
+                  moduleName = "DriverDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///var/folders/bc/k62xg8cn44lb8y0_vl7q2dm00000gn/T/swift-generated-sources/@__swiftmacro_10DriverDemo8Category5ModelfMm_.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "2"
+                  endingLineNumber = "2"
+                  offsetFromSymbolStart = "68">
+               </Location>
+               <Location
+                  uuid = "4FCD53F1-118A-4F64-939D-854C8D4B3C7A - c86fcfdd20561244"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DriverDemo.Category.init(title: Swift.String) -&gt; DriverDemo.Category"
+                  moduleName = "DriverDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///var/folders/bc/k62xg8cn44lb8y0_vl7q2dm00000gn/T/swift-generated-sources/@__swiftmacro_10DriverDemo8Category5ModelfMm_.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "2"
+                  endingLineNumber = "2"
+                  offsetFromSymbolStart = "56">
+               </Location>
+               <Location
+                  uuid = "4FCD53F1-118A-4F64-939D-854C8D4B3C7A - 788858b5b78cd620"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DriverDemo.Category.init(categoryName: Swift.String) -&gt; DriverDemo.Category"
+                  moduleName = "DriverDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///var/folders/bc/k62xg8cn44lb8y0_vl7q2dm00000gn/T/swift-generated-sources/@__swiftmacro_10DriverDemo8Category5ModelfMm_.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "2"
+                  endingLineNumber = "2"
+                  offsetFromSymbolStart = "56">
+               </Location>
+               <Location
+                  uuid = "4FCD53F1-118A-4F64-939D-854C8D4B3C7A - 788858b5b78cd620"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DriverDemo.Category.init(categoryName: Swift.String) -&gt; DriverDemo.Category"
+                  moduleName = "DriverDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///var/folders/bc/k62xg8cn44lb8y0_vl7q2dm00000gn/T/swift-generated-sources/@__swiftmacro_10DriverDemo8Category5ModelfMm_.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "2"
+                  endingLineNumber = "2"
+                  offsetFromSymbolStart = "68">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
