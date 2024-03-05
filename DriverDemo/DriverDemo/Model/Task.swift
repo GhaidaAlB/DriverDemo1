@@ -15,7 +15,7 @@ import SwiftData
     var createdAt:Date
     var isCompleted:Bool
     
-    @Relationship(deleteRule:.nullify , inverse: \Category.tasks) var category:[Category]?
+//     @Relationship(deleteRule:.nullify) var category:[Category]?
     
     init(title: String, taskDescription: String, createdAt: Date, isCompleted: Bool) {
         self.title = title

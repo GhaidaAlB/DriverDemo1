@@ -9,13 +9,14 @@ import SwiftUI
 import SwiftData
 
 @Model
- class Category {
+class Category {
     @Attribute(.unique) var categoryName:String
+//    @Relationship(deleteRule:.cascade) var tasks:[Tasks]?
     
-     var tasks:[Tasks]?
-
     init(categoryName: String) {
         self.categoryName = categoryName
+
     }
+
 }
 
