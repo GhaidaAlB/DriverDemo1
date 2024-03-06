@@ -4,16 +4,15 @@
 //
 //  Created by Ammar Ahmed on 22/08/1445 AH.
 //
-import SwiftData
 import SwiftUI
 
 struct TasksView: View {
-    @Query var allCategory: [Category]
-    @Query var allTasks:[Tasks]
     @State private var addCategory:Bool = false
     @State private var addTask:Bool = false
-    @State private var newTask:Task?
-    @State private var newCategoryName:String = ""
+    @State private var newTask:Tasks?
+    @StateObject private var categoryNetworkManger = CatoegoriesNetworkManger()
+    
+    
     
 
     var body: some View {
@@ -21,37 +20,7 @@ struct TasksView: View {
             VStack{
                 Form{
                     
-                    Section{
-                        if allCategory.isEmpty{
-                            ContentUnavailableView{
-                                Image(systemName: "doc.badge.plus")
-                                    .font(.largeTitle)
-                                    .foregroundStyle(.black.opacity(0.6))
-                                
-                            }description: {
-                                Text("no category created")
-                            }actions: {
-                                Button("Add Catogory"){
-                                    addCategory.toggle()
-                                }
-                                .buttonStyle(.borderedProminent)
-                            }
-                            
-                        }else{
-                            List(allCategory){category in
-                                HStack{
-                                    Text(category.categoryName)
-                                    Spacer()
-//                                    Text("\(category.tasks?.count ?? 0)")
-                                }
-                            }
-                        }
-                        
-                    }header: {
-                        Text("Categories")
-                            .bold()
-                            .font(.title3)
-                    }
+                
                     
                 }
                 
@@ -76,6 +45,11 @@ struct TasksView: View {
             }
             .navigationTitle("Tasks")
             .navigationBarTitleDisplayMode(/*@START_MENU_TOKEN@*/.automatic/*@END_MENU_TOKEN@*/)
+            .onAppear{
+                Task{
+                  await  categoryNetworkManger.fetchAllCategorues()
+                }
+            }
         }
         
     }

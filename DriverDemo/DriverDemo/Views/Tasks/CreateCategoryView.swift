@@ -11,7 +11,7 @@ struct CreateCategoryView: View {
     @Environment(\.dismiss) var dismiss
     @State private var title:String = ""
     @State private var des = ""
-    @Environment(\.modelContext) var context
+
     
     var body: some View {
         NavigationStack{
@@ -31,8 +31,7 @@ struct CreateCategoryView: View {
                 
                 ToolbarItem(placement:.topBarTrailing){
                     Button("Add"){
-                        context.insert(Category(categoryName: title))
-                        try?context.save()
+                      
                         
                     }
                     .disabled(title.isEmpty)

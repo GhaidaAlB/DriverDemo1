@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct Category {
+struct Category:Decodable {
     var title:String
-    var tasks:[Task]
+    var tasks:[TaskValue]
 }
 
