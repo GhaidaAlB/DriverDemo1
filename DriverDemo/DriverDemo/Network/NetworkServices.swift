@@ -1,0 +1,90 @@
+//
+//  endpoints.swift
+//  DriverDemo
+//
+//  Created by Ammar Ahmed on 25/08/1445 AH.
+//
+
+import Foundation
+
+enum APIError: Error {
+    case invalidURL
+    case invalidRequestBody
+}
+
+protocol Request{
+    var url:URL { get }
+    var httpMethod:HTTPMethods { get }
+    var isJsonEncoded:Bool { get }
+}
+
+enum EndpointEnum{
+    case createCategory
+    case listCategories
+    case updateCategory
+    case deleteCategory
+    case createTask
+}
+
+enum HTTPMethods:String {
+    case GET = "GET"
+    case PUT = "PUT"
+    case POST = "POST"
+    case DELETE = "DELETE"
+}
+
+class EndPoint{
+    let baseURL = "https://localhost:3003"
+    var requestURL:URL
+    
+    required init(with URI:String){
+        var urlString = baseURL + URI
+        
+        guard let url = URL(string:urlString) else {
+            fatalError("invalid error")
+        }
+         requestURL = url
+    }
+}
+
+
+//endpoint types
+extension EndpointEnum:Request {
+    var url: URL {
+      let baseURL = "https://localhost:3003"
+        
+        switch self {
+        case .createCategory,.createTask,.deleteCategory,.listCategories,.updateCategory:
+            return EndPoint(with: "/categories").requestURL
+  
+        }
+        
+
+    }
+    
+    var httpMethod: HTTPMethods {
+        switch self {
+        case .createTask,.createCategory:
+            return .POST
+        case .listCategories:
+            return .GET
+        case .updateCategory:
+            return .PUT
+        case .deleteCategory:
+            return .DELETE
+        }
+    }
+    
+    
+    var contentType:String {return "application/json"}
+    
+    var isJsonEncoded:Bool{
+        switch self{
+        case .createCategory,.createTask,.deleteCategory,.updateCategory:
+            return true
+        case .listCategories:
+            return false
+        }
+    }
+    
+}
