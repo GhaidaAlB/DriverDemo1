@@ -16,6 +16,7 @@ protocol Request{
     var url:URL { get }
     var httpMethod:HTTPMethods { get }
     var isJsonEncoded:Bool { get }
+    var header:[String:String] { get }
 }
 
 enum EndpointEnum{
@@ -33,6 +34,8 @@ enum HTTPMethods:String {
     case DELETE = "DELETE"
 }
 
+typealias Params=[String:Any]
+
 class EndPoint{
     let baseURL = "https://localhost:3003"
     var requestURL:URL
@@ -47,19 +50,26 @@ class EndPoint{
     }
 }
 
-
-//endpoint types
 extension EndpointEnum:Request {
+    var header: [String : String] {
+        switch self{
+        case .createCategory,.createTask,.deleteCategory,.updateCategory:
+            return ["Accept":"application/json"]
+        case .listCategories:
+            return ["Content-Type":"application/json"]
+        }
+    }
+    
     var url: URL {
       let baseURL = "https://localhost:3003"
         
         switch self {
-        case .createCategory,.createTask,.deleteCategory,.listCategories,.updateCategory:
+        case .createCategory,.deleteCategory,.listCategories,.updateCategory:
             return EndPoint(with: "/categories").requestURL
+        case .createTask:
+            return EndPoint(with: "/categories/tasks").requestURL
   
         }
-        
-
     }
     
     var httpMethod: HTTPMethods {

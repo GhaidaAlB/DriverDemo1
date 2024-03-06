@@ -75,19 +75,21 @@ app.get('/categories', async (req, res) => {
   }
 });
 
-app.put('/categories/:id', async (req, res) => {
-  const { title } = req.body;
+app.put('/categories', async (req, res) => {
+  const { title ,id} = req.body;
   try {
-    const category = await Category.findByIdAndUpdate(req.params.id, { title }, { new: true });
+    const category = await Category.findByIdAndUpdate(id, { title }, { new: true });
     res.send(category);
   } catch (err) {
     res.status(500).send(err);
   }
 });
 
-app.delete('/categories/:id', async (req, res) => {
+app.delete('/categories', async (req, res) =>
+{
+    const { id } = req.body;
   try {
-    await Category.findByIdAndDelete(req.params.id);
+    await Category.findByIdAndDelete(id );
     res.status(204).send();
   } catch (err) {
     res.status(500).send(err);
@@ -95,12 +97,12 @@ app.delete('/categories/:id', async (req, res) => {
 });
 
 // Routes for Tasks within a Category
-app.post('/categories/:categoryId/tasks', async (req, res) => {
-  const { title, description } = req.body;
+app.post('/categories/tasks', async (req, res) => {
+  const { title, description ,categoryId} = req.body;
   const task = new Task({ title, description });
   try {
     await task.save();
-    await Category.findByIdAndUpdate(req.params.categoryId, { $push: { tasks: task._id } });
+    await Category.findByIdAndUpdate(categoryId, { $push: { tasks: task._id } });
     res.status(201).send(task);
   } catch (err) {
     res.status(500).send(err);

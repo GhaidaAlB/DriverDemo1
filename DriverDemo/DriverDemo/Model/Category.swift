@@ -6,17 +6,9 @@
 //
 
 import SwiftUI
-import SwiftData
 
-@Model
-class Category {
-    @Attribute(.unique) var categoryName:String
-//    @Relationship(deleteRule:.cascade) var tasks:[Tasks]?
-    
-    init(categoryName: String) {
-        self.categoryName = categoryName
-
-    }
-
+struct Category {
+    var title:String
+    var tasks:[Task]
 }
 

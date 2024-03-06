@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import SwiftData
 
 @main
 struct DriverDemoApp: App {
@@ -14,8 +13,6 @@ struct DriverDemoApp: App {
        var body: some Scene {
            WindowGroup {
                MainView()
-                   .modelContainer(for: [Category.self,
-                                         Task.self])
            }
            
     }

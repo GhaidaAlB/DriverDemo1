@@ -6,23 +6,13 @@
 //
 
 import Foundation
-import SwiftData
 
-@Model
- class Task{
+ struct Task{
     var title:String
     var taskDescription:String
     var createdAt:Date
     var isCompleted:Bool
     
-//     @Relationship(deleteRule:.nullify) var category:[Category]?
-    
-    init(title: String, taskDescription: String, createdAt: Date, isCompleted: Bool) {
-        self.title = title
-        self.taskDescription = taskDescription
-        self.createdAt = createdAt
-        self.isCompleted = isCompleted
-    }
 }
 
 extension Task{

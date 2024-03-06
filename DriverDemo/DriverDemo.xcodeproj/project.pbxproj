@@ -28,6 +28,8 @@
 		F0840ACB2B95F3E4003C3495 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0840ACA2B95F3E4003C3495 /* Task.swift */; };
 		F0840ACD2B95F4CB003C3495 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0840ACC2B95F4CB003C3495 /* Category.swift */; };
 		F0840ACF2B95F976003C3495 /* CreateCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0840ACE2B95F976003C3495 /* CreateCategoryView.swift */; };
+		F0840B0A2B984A4B003C3495 /* NetworkServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0840B092B984A4B003C3495 /* NetworkServices.swift */; };
+		F0840B0E2B986646003C3495 /* NetworkManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0840B0D2B986646003C3495 /* NetworkManger.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +74,8 @@
 		F0840ACA2B95F3E4003C3495 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		F0840ACC2B95F4CB003C3495 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		F0840ACE2B95F976003C3495 /* CreateCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCategoryView.swift; sourceTree = "<group>"; };
+		F0840B092B984A4B003C3495 /* NetworkServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServices.swift; sourceTree = "<group>"; };
+		F0840B0D2B986646003C3495 /* NetworkManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManger.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +124,7 @@
 		F0840A662B92F587003C3495 /* DriverDemo */ = {
 			isa = PBXGroup;
 			children = (
+				F0840B082B984A35003C3495 /* Network */,
 				F0840AC52B95B5CC003C3495 /* Model */,
 				F0840AB22B944811003C3495 /* Utility */,
 				F0840AA52B9346EF003C3495 /* UI */,
@@ -215,6 +220,15 @@
 				F0840ACC2B95F4CB003C3495 /* Category.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		F0840B082B984A35003C3495 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				F0840B092B984A4B003C3495 /* NetworkServices.swift */,
+				F0840B0D2B986646003C3495 /* NetworkManger.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -356,6 +370,7 @@
 				F0840ABE2B947430003C3495 /* TasksView.swift in Sources */,
 				F0840AB52B944EE8003C3495 /* MapView.swift in Sources */,
 				F0840AAB2B934CF7003C3495 /* HomeHeaderView.swift in Sources */,
+				F0840B0E2B986646003C3495 /* NetworkManger.swift in Sources */,
 				F0840AB12B939C10003C3495 /* ActivityView.swift in Sources */,
 				F0840A982B930E21003C3495 /* UnAvailableView.swift in Sources */,
 				F0840ACF2B95F976003C3495 /* CreateCategoryView.swift in Sources */,
@@ -365,6 +380,7 @@
 				F0840A962B930AB7003C3495 /* HomeView.swift in Sources */,
 				F0840A682B92F587003C3495 /* DriverDemoApp.swift in Sources */,
 				F0840ACB2B95F3E4003C3495 /* Task.swift in Sources */,
+				F0840B0A2B984A4B003C3495 /* NetworkServices.swift in Sources */,
 				F0840AA92B934B4F003C3495 /* WelcomeUser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
