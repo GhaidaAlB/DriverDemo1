@@ -14,14 +14,11 @@ struct TasksView: View {
     
     
     
-
     var body: some View {
         NavigationStack{
             VStack{
                 Form{
-                    
                 
-                    
                 }
                 
                 .toolbar{

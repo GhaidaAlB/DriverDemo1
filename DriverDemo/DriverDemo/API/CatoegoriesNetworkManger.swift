@@ -23,6 +23,8 @@ class CatoegoriesNetworkManger: ObservableObject {
             let response:[Category] = try await networkManger.request(from: .listCategories)
             
             allCategories = response
+            
+            print(response)
         }catch{
             
             self.error = error.localizedDescription

@@ -37,11 +37,11 @@ enum HTTPMethods:String {
 typealias Params=[String:Any]
 
 class EndPoint{
-    let baseURL = "https://localhost:3003"
+    let baseURL = "http://localhost:3003"
     var requestURL:URL
     
     required init(with URI:String){
-        var urlString = baseURL + URI
+        let urlString = baseURL + URI
         
         guard let url = URL(string:urlString) else {
             fatalError("invalid error")
