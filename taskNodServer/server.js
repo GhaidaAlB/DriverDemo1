@@ -21,7 +21,7 @@ mongoose.connect("mongodb+srv://admin:H6oezdVRRgPAhZGA@cluster0.v5puiok.mongodb.
 // Task Schema
 const taskSchema = new mongoose.Schema({
   title: String,
-  description: String,
+  taskDescription: String,
   createdAt: { type: Date, default: Date.now },
   isCompleted: { type: Boolean, default: false }
 });
@@ -98,8 +98,8 @@ app.delete('/categories', async (req, res) =>
 
 // Routes for Tasks within a Category
 app.post('/categories/tasks', async (req, res) => {
-  const { title, description ,categoryId} = req.body;
-  const task = new Task({ title, description });
+  const { title, taskDescription ,categoryId} = req.body;
+  const task = new Task({ title, taskDescription });
   try {
     await task.save();
     await Category.findByIdAndUpdate(categoryId, { $push: { tasks: task._id } });

@@ -17,6 +17,8 @@ protocol Request{
     var httpMethod:HTTPMethods { get }
     var isJsonEncoded:Bool { get }
     var header:[String:String] { get }
+    var query:[URLQueryItem]? { get }
+    var body: [String: Any]? { get }
 }
 
 enum EndpointEnum{
