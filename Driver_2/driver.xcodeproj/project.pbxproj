@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		F00B84F82B9CC31F0076C8F5 /* DriverProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00B84F72B9CC31F0076C8F5 /* DriverProfileView.swift */; };
 		F00B84FA2B9CDC730076C8F5 /* ThemeChangeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00B84F92B9CDC730076C8F5 /* ThemeChangeView.swift */; };
+		F00B84FD2BA05C260076C8F5 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00B84FC2BA05C260076C8F5 /* APIClient.swift */; };
+		F00B84FF2BA05CEF0076C8F5 /* APIContents.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00B84FE2BA05CEF0076C8F5 /* APIContents.swift */; };
+		F00B85042BA062810076C8F5 /* TasksModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00B85032BA062810076C8F5 /* TasksModel.swift */; };
+		F00B85062BA063E10076C8F5 /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00B85052BA063E10076C8F5 /* APIRouter.swift */; };
+		F00B85082BA066B40076C8F5 /* APIParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00B85072BA066B40076C8F5 /* APIParameters.swift */; };
+		F00B850A2BA06FAE0076C8F5 /* TasksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00B85092BA06FAE0076C8F5 /* TasksViewModel.swift */; };
 		F03E60B72B999A38003E4A22 /* driverApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03E60B62B999A38003E4A22 /* driverApp.swift */; };
 		F03E60B92B999A38003E4A22 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03E60B82B999A38003E4A22 /* ContentView.swift */; };
 		F03E60BB2B999A39003E4A22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F03E60BA2B999A39003E4A22 /* Assets.xcassets */; };
@@ -46,6 +52,12 @@
 /* Begin PBXFileReference section */
 		F00B84F72B9CC31F0076C8F5 /* DriverProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverProfileView.swift; sourceTree = "<group>"; };
 		F00B84F92B9CDC730076C8F5 /* ThemeChangeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeChangeView.swift; sourceTree = "<group>"; };
+		F00B84FC2BA05C260076C8F5 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		F00B84FE2BA05CEF0076C8F5 /* APIContents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIContents.swift; sourceTree = "<group>"; };
+		F00B85032BA062810076C8F5 /* TasksModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksModel.swift; sourceTree = "<group>"; };
+		F00B85052BA063E10076C8F5 /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
+		F00B85072BA066B40076C8F5 /* APIParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIParameters.swift; sourceTree = "<group>"; };
+		F00B85092BA06FAE0076C8F5 /* TasksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewModel.swift; sourceTree = "<group>"; };
 		F03E60B32B999A38003E4A22 /* driver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = driver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F03E60B62B999A38003E4A22 /* driverApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = driverApp.swift; sourceTree = "<group>"; };
 		F03E60B82B999A38003E4A22 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -100,6 +112,17 @@
 			path = Driver;
 			sourceTree = "<group>";
 		};
+		F00B84FB2BA05BDF0076C8F5 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				F00B84FC2BA05C260076C8F5 /* APIClient.swift */,
+				F00B84FE2BA05CEF0076C8F5 /* APIContents.swift */,
+				F00B85052BA063E10076C8F5 /* APIRouter.swift */,
+				F00B85072BA066B40076C8F5 /* APIParameters.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		F03E60AA2B999A38003E4A22 = {
 			isa = PBXGroup;
 			children = (
@@ -121,8 +144,9 @@
 		F03E60B52B999A38003E4A22 /* driver */ = {
 			isa = PBXGroup;
 			children = (
+				F00B84FB2BA05BDF0076C8F5 /* Network */,
 				F03E60EC2B99B4E4003E4A22 /* UI */,
-				F03E60E32B999BBC003E4A22 /* Modals */,
+				F03E60E32B999BBC003E4A22 /* Models */,
 				F03E60E02B999A96003E4A22 /* View */,
 				F03E60B62B999A38003E4A22 /* driverApp.swift */,
 				F03E60B82B999A38003E4A22 /* ContentView.swift */,
@@ -150,14 +174,16 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		F03E60E32B999BBC003E4A22 /* Modals */ = {
+		F03E60E32B999BBC003E4A22 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				F03E60E42B999BD4003E4A22 /* DriverProfileModal.swift */,
 				F03E60E62B999C05003E4A22 /* RideRequestModel.swift */,
 				F03E60E82B999D9A003E4A22 /* RideDetailModel.swift */,
+				F00B85032BA062810076C8F5 /* TasksModel.swift */,
+				F00B85092BA06FAE0076C8F5 /* TasksViewModel.swift */,
 			);
-			path = Modals;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		F03E60EC2B99B4E4003E4A22 /* UI */ = {
@@ -314,17 +340,23 @@
 				F03E60F02B99B864003E4A22 /* RideSummary.swift in Sources */,
 				F03E60F72B9C5AEE003E4A22 /* MapView.swift in Sources */,
 				F03E60FC2B9C856E003E4A22 /* CustomAnnotationView.swift in Sources */,
+				F00B84FD2BA05C260076C8F5 /* APIClient.swift in Sources */,
 				F00B84FA2B9CDC730076C8F5 /* ThemeChangeView.swift in Sources */,
 				F03E60E72B999C05003E4A22 /* RideRequestModel.swift in Sources */,
 				F03E60F42B99EFFF003E4A22 /* SummaryCard.swift in Sources */,
 				F03E60B92B999A38003E4A22 /* ContentView.swift in Sources */,
+				F00B85082BA066B40076C8F5 /* APIParameters.swift in Sources */,
 				F03E60E52B999BD4003E4A22 /* DriverProfileModal.swift in Sources */,
 				F03E60B72B999A38003E4A22 /* driverApp.swift in Sources */,
 				F03E60E92B999D9A003E4A22 /* RideDetailModel.swift in Sources */,
 				F03E60E22B999AA5003E4A22 /* RideDeatils.swift in Sources */,
+				F00B85042BA062810076C8F5 /* TasksModel.swift in Sources */,
 				F00B84F82B9CC31F0076C8F5 /* DriverProfileView.swift in Sources */,
 				F03E60F22B99CEF5003E4A22 /* RequestStatus.swift in Sources */,
+				F00B850A2BA06FAE0076C8F5 /* TasksViewModel.swift in Sources */,
 				F03E60EE2B99B4F6003E4A22 /* Avatar.swift in Sources */,
+				F00B85062BA063E10076C8F5 /* APIRouter.swift in Sources */,
+				F00B84FF2BA05CEF0076C8F5 /* APIContents.swift in Sources */,
 				F03E60EB2B999F31003E4A22 /* AppCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
