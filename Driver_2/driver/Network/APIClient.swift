@@ -118,10 +118,12 @@ struct NetworkDispatcher {
             throw httpError(httpResponse.statusCode)
         }
         
+       
         do {
             let decodedData = try JSONDecoder().decode(ReturnType.self, from: data)
             return decodedData
         } catch {
+            print(error)
             throw NetworkRequestError.decodingError(error.localizedDescription)
         }
     }

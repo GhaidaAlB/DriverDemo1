@@ -24,6 +24,7 @@ struct ContentView: View {
                         .padding([.horizontal])
                     }
                 }
+                
                 .toolbar{
                     ToolbarItem(placement: .topBarTrailing){
                         NavigationLink(destination: DriverProfileView(driverInfo:appDitails.driverProfile)){
@@ -35,10 +36,8 @@ struct ContentView: View {
                 .sheet(isPresented: $appDitails.isSelectedRide){
                     RideDeatilsView(rideDeatils: appDitails.selectedRide!)
                 }
-                
                
             }
-            
         }
     
         

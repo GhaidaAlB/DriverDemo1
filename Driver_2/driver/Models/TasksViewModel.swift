@@ -13,6 +13,7 @@ class TasksViewModel:ObservableObject{
     @Published var selectedCategoy:Category?
     @Published var isLoading:Bool = false
     
+    
     func getCategoies()async{
         
         isLoading = true

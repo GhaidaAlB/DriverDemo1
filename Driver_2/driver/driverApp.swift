@@ -10,6 +10,7 @@ import SwiftUI
 @main
 struct driverApp: App {
     @StateObject var appCoordinator = AppCoordinator()
+    @StateObject var taskApiModel = TasksViewModel()
     @AppStorage("userTheme") private var useTheme:Theme = .systemDefault
     
     var body: some Scene {
@@ -18,6 +19,7 @@ struct driverApp: App {
                 .background()
                 .preferredColorScheme(useTheme.colorScheme)
                 .environmentObject(appCoordinator)
+                .environmentObject(taskApiModel)
             
         }
     }
