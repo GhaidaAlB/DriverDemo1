@@ -26,7 +26,7 @@ class APIRoutes{
     }
     
     struct AddCategory:Request {
-        typealias ReturnType = Category
+        typealias ReturnType = NewCategoryResponse
         var path: String = "/categories"
         var method: HTTPMethod = .post
         var body: [String : Any]?

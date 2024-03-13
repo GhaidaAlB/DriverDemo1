@@ -7,12 +7,13 @@
 
 import Foundation
 
-struct TaskModel:Codable,Hashable{
+struct TaskModel:Codable,Hashable,Identifiable{
     var id:String
     var title:String
     var taskDescription:String
-    var createdAt:Date
+    var createdAt:String
     var isCompleted:Bool
+    
     
     enum CodingKeys: String, CodingKey {
         case id = "_id"
@@ -23,8 +24,24 @@ struct TaskModel:Codable,Hashable{
 }
 
 
-struct Category:Codable{
+struct Category:Codable,Identifiable{
     var id:String
     var title:String
     var tasks:[TaskModel]
+}
+
+struct NewCategoryResponse:Codable,Identifiable{
+        var title: String
+        var tasks: [TaskModel]
+        var id: String
+        
+        enum CodingKeys: String, CodingKey {
+            case title, tasks
+            case id = "_id"
+        }
+    
+}
+
+extension Category{
+    static var example:Category = Category(id: "1", title: "test", tasks: [])
 }

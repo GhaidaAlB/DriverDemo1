@@ -68,6 +68,7 @@ extension Request {
         guard let httpBody = try? JSONSerialization.data(withJSONObject: params, options: []) else {
             return nil
         }
+    
         return httpBody
     }
     
@@ -88,25 +89,18 @@ extension Request {
         request.httpBody = requestBodyFrom(params: body)
         request.allHTTPHeaderFields = headers
         
- 
-        request.setValue(ContentType.json.rawValue, forHTTPHeaderField: HTTPHeaderField.acceptType.rawValue)
-      
+        request.setValue(ContentType.json.rawValue, forHTTPHeaderField: HTTPHeaderField.contentType.rawValue)
+
         return request
     }
 }
 
 struct NetworkDispatcher {
     
-    let urlSession: URLSession
-    
-    init(urlSession: URLSession = .shared) {
-        self.urlSession = urlSession
-    }
-    
     func dispatch<ReturnType: Codable>(request: URLRequest) async throws -> ReturnType {
-        print("[\(request.httpMethod?.uppercased() ?? "")] '\(request.url!)'")
+        print("[\(request.httpMethod?.uppercased() ?? "")] '\(request.url!)'") //LOG
         
-        let (data, response) = try await urlSession.data(for: request)
+        let (data, response) = try await URLSession.shared.data(for: request)
         
         guard let httpResponse = response as? HTTPURLResponse else {
             throw NetworkRequestError.unknownError
@@ -115,6 +109,7 @@ struct NetworkDispatcher {
         print("[\(httpResponse.statusCode)] '\(request.url!)'")
         
         guard (200...299).contains(httpResponse.statusCode) else {
+            print(try JSONDecoder().decode(ReturnType.self, from: data))
             throw httpError(httpResponse.statusCode)
         }
         

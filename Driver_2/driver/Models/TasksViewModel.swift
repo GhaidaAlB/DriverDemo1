@@ -38,9 +38,8 @@ class TasksViewModel:ObservableObject{
         isLoading = true
         do{
             try await APIClient.dispatch(APIRoutes.AddCategory(body: APIParameters.categoiesParam(title: title)))
-            await getCategoies()
         }catch{
-            print(error.localizedDescription)
+            print(error)
         }
         isLoading = false
     }
@@ -53,7 +52,7 @@ class TasksViewModel:ObservableObject{
                     .addTaskParam(title: title,
                                   taskDescription: taskDescription,
                                   categoryId:categoryId)))
-            await getCategoies()
+
         }catch{
             print(error.localizedDescription)
         }

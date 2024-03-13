@@ -15,6 +15,14 @@
 		F00B85062BA063E10076C8F5 /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00B85052BA063E10076C8F5 /* APIRouter.swift */; };
 		F00B85082BA066B40076C8F5 /* APIParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00B85072BA066B40076C8F5 /* APIParameters.swift */; };
 		F00B850A2BA06FAE0076C8F5 /* TasksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00B85092BA06FAE0076C8F5 /* TasksViewModel.swift */; };
+		F00B850D2BA1A2390076C8F5 /* TabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00B850C2BA1A2390076C8F5 /* TabsView.swift */; };
+		F00B85102BA1A3C80076C8F5 /* CategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00B850F2BA1A3C80076C8F5 /* CategoriesView.swift */; };
+		F00B85132BA1A3E20076C8F5 /* SummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00B85122BA1A3E20076C8F5 /* SummaryView.swift */; };
+		F00B85152BA1A7D30076C8F5 /* Tabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00B85142BA1A7D30076C8F5 /* Tabs.swift */; };
+		F00B85172BA1A8A50076C8F5 /* UnavailableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00B85162BA1A8A50076C8F5 /* UnavailableView.swift */; };
+		F00B85192BA1B23C0076C8F5 /* CreateCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00B85182BA1B23C0076C8F5 /* CreateCategoryView.swift */; };
+		F00B851B2BA243BA0076C8F5 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00B851A2BA243BA0076C8F5 /* CategoryView.swift */; };
+		F00B851D2BA25A580076C8F5 /* CreateTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00B851C2BA25A580076C8F5 /* CreateTaskView.swift */; };
 		F03E60B72B999A38003E4A22 /* driverApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03E60B62B999A38003E4A22 /* driverApp.swift */; };
 		F03E60B92B999A38003E4A22 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03E60B82B999A38003E4A22 /* ContentView.swift */; };
 		F03E60BB2B999A39003E4A22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F03E60BA2B999A39003E4A22 /* Assets.xcassets */; };
@@ -59,6 +67,14 @@
 		F00B85072BA066B40076C8F5 /* APIParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIParameters.swift; sourceTree = "<group>"; };
 		F00B85092BA06FAE0076C8F5 /* TasksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewModel.swift; sourceTree = "<group>"; };
 		F00B850B2BA0D7600076C8F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		F00B850C2BA1A2390076C8F5 /* TabsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsView.swift; sourceTree = "<group>"; };
+		F00B850F2BA1A3C80076C8F5 /* CategoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesView.swift; sourceTree = "<group>"; };
+		F00B85122BA1A3E20076C8F5 /* SummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryView.swift; sourceTree = "<group>"; };
+		F00B85142BA1A7D30076C8F5 /* Tabs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabs.swift; sourceTree = "<group>"; };
+		F00B85162BA1A8A50076C8F5 /* UnavailableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnavailableView.swift; sourceTree = "<group>"; };
+		F00B85182BA1B23C0076C8F5 /* CreateCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCategoryView.swift; sourceTree = "<group>"; };
+		F00B851A2BA243BA0076C8F5 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
+		F00B851C2BA25A580076C8F5 /* CreateTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTaskView.swift; sourceTree = "<group>"; };
 		F03E60B32B999A38003E4A22 /* driver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = driver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F03E60B62B999A38003E4A22 /* driverApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = driverApp.swift; sourceTree = "<group>"; };
 		F03E60B82B999A38003E4A22 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -124,6 +140,25 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		F00B850E2BA1A3B90076C8F5 /* Tasks */ = {
+			isa = PBXGroup;
+			children = (
+				F00B850F2BA1A3C80076C8F5 /* CategoriesView.swift */,
+				F00B85182BA1B23C0076C8F5 /* CreateCategoryView.swift */,
+				F00B851A2BA243BA0076C8F5 /* CategoryView.swift */,
+				F00B851C2BA25A580076C8F5 /* CreateTaskView.swift */,
+			);
+			path = Tasks;
+			sourceTree = "<group>";
+		};
+		F00B85112BA1A3D20076C8F5 /* Summary */ = {
+			isa = PBXGroup;
+			children = (
+				F00B85122BA1A3E20076C8F5 /* SummaryView.swift */,
+			);
+			path = Summary;
+			sourceTree = "<group>";
+		};
 		F03E60AA2B999A38003E4A22 = {
 			isa = PBXGroup;
 			children = (
@@ -170,8 +205,12 @@
 		F03E60E02B999A96003E4A22 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F00B85112BA1A3D20076C8F5 /* Summary */,
+				F00B850E2BA1A3B90076C8F5 /* Tasks */,
 				F00B84F62B9CC30C0076C8F5 /* Driver */,
 				F03E60F82B9C6834003E4A22 /* RideDeatils */,
+				F00B850C2BA1A2390076C8F5 /* TabsView.swift */,
+				F00B85162BA1A8A50076C8F5 /* UnavailableView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -184,6 +223,7 @@
 				F03E60E82B999D9A003E4A22 /* RideDetailModel.swift */,
 				F00B85032BA062810076C8F5 /* TasksModel.swift */,
 				F00B85092BA06FAE0076C8F5 /* TasksViewModel.swift */,
+				F00B85142BA1A7D30076C8F5 /* Tabs.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -339,10 +379,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F00B85192BA1B23C0076C8F5 /* CreateCategoryView.swift in Sources */,
+				F00B851D2BA25A580076C8F5 /* CreateTaskView.swift in Sources */,
 				F03E60F02B99B864003E4A22 /* RideSummary.swift in Sources */,
 				F03E60F72B9C5AEE003E4A22 /* MapView.swift in Sources */,
+				F00B85102BA1A3C80076C8F5 /* CategoriesView.swift in Sources */,
+				F00B85152BA1A7D30076C8F5 /* Tabs.swift in Sources */,
 				F03E60FC2B9C856E003E4A22 /* CustomAnnotationView.swift in Sources */,
 				F00B84FD2BA05C260076C8F5 /* APIClient.swift in Sources */,
+				F00B85132BA1A3E20076C8F5 /* SummaryView.swift in Sources */,
+				F00B850D2BA1A2390076C8F5 /* TabsView.swift in Sources */,
 				F00B84FA2B9CDC730076C8F5 /* ThemeChangeView.swift in Sources */,
 				F03E60E72B999C05003E4A22 /* RideRequestModel.swift in Sources */,
 				F03E60F42B99EFFF003E4A22 /* SummaryCard.swift in Sources */,
@@ -350,11 +396,13 @@
 				F00B85082BA066B40076C8F5 /* APIParameters.swift in Sources */,
 				F03E60E52B999BD4003E4A22 /* DriverProfileModal.swift in Sources */,
 				F03E60B72B999A38003E4A22 /* driverApp.swift in Sources */,
+				F00B85172BA1A8A50076C8F5 /* UnavailableView.swift in Sources */,
 				F03E60E92B999D9A003E4A22 /* RideDetailModel.swift in Sources */,
 				F03E60E22B999AA5003E4A22 /* RideDeatils.swift in Sources */,
 				F00B85042BA062810076C8F5 /* TasksModel.swift in Sources */,
 				F00B84F82B9CC31F0076C8F5 /* DriverProfileView.swift in Sources */,
 				F03E60F22B99CEF5003E4A22 /* RequestStatus.swift in Sources */,
+				F00B851B2BA243BA0076C8F5 /* CategoryView.swift in Sources */,
 				F00B850A2BA06FAE0076C8F5 /* TasksViewModel.swift in Sources */,
 				F03E60EE2B99B4F6003E4A22 /* Avatar.swift in Sources */,
 				F00B85062BA063E10076C8F5 /* APIRouter.swift in Sources */,

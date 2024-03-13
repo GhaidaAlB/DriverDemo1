@@ -12,7 +12,7 @@ protocol DictionaryConvertor: Codable {}
 struct APIParameters {
     
     struct categoiesParam:Encodable{
-        var title:String?
+        var title:String
     }
     
     struct addTaskParam:Encodable{

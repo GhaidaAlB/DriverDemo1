@@ -38,8 +38,10 @@ const Category = mongoose.model('Category', categorySchema);
 // Routes for Categories
 app.post('/categories', async (req, res) => {
     const { title } = req.body;
-
-    if (!title || title.trim() === '') {
+ console.log(req.body)
+  if (!title || title.trim() === '')
+  {
+     
         return res.status(400).send({ message: "Title is required." });
     }
 
