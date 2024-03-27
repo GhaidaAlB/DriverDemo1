@@ -53,6 +53,14 @@ class EndPoint{
 }
 
 extension EndpointEnum:Request {
+    var query: [URLQueryItem]? {
+        <#code#>
+    }
+    
+    var body: [String : Any]? {
+        <#code#>
+    }
+    
     var header: [String : String] {
         switch self{
         case .createCategory,.createTask,.deleteCategory,.updateCategory:

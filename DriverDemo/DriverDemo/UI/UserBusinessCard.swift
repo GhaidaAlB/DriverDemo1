@@ -44,10 +44,10 @@ struct BusinessCard: View {
                 }
             }
             
-      
+            
             .padding(.horizontal)
             
-          
+            
             
             
             .sheet(isPresented: $shareTheUserInfo) {

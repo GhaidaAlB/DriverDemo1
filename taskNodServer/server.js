@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 3003;
 app.use(express.json());
 
 
-mongoose.connect("mongodb+srv://admin:H6oezdVRRgPAhZGA@cluster0.v5puiok.mongodb.net/?retryWrites=true&w=majority")
+mongoose.connect("mongodb+srv://admin:7vc5BdSj9aw2Gi6D@cluster0.v5puiok.mongodb.net/?retryWrites=true&w=majority")
   .then(() => {
     console.log("Connected to MongoDB");
     app.listen(PORT, () => {
@@ -38,7 +38,6 @@ const Category = mongoose.model('Category', categorySchema);
 // Routes for Categories
 app.post('/categories', async (req, res) => {
     const { title } = req.body;
- console.log(req.body)
   if (!title || title.trim() === '')
   {
      
@@ -106,6 +105,31 @@ app.post('/categories/tasks', async (req, res) => {
     await task.save();
     await Category.findByIdAndUpdate(categoryId, { $push: { tasks: task._id } });
     res.status(201).send(task);
+  } catch (err) {
+    res.status(500).send(err);
+  }
+});
+
+app.put('/tasks/complete', async (req, res) => {
+  const { taskId } = req.params;
+  try {
+    const updatedTask = await Task.findByIdAndUpdate(taskId, { isCompleted: true }, { new: true });
+    if (!updatedTask) {
+      return res.status(404).send({ message: "Task not found." });
+    }
+    res.send(updatedTask);
+  } catch (err) {
+    res.status(500).send(err);
+  }
+});
+
+app.get('/tasks/latest', async (req, res) => {
+  const limit = parseInt(req.query.limit) || 10; 
+  try {
+    const latestTasks = await Task.find({})
+      .sort({ createdAt: -1 }) 
+      .limit(limit); 
+    res.send(latestTasks);
   } catch (err) {
     res.status(500).send(err);
   }
